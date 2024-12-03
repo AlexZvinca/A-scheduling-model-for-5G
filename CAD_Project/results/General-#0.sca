@@ -1,8 +1,8 @@
 version 3
-run General-0-20241130-16:43:54-4012
+run General-0-20241203-15:14:15-18296
 attr configname General
-attr datetime 20241130-16:43:54
-attr datetimef 20241130-164354
+attr datetime 20241203-15:14:15
+attr datetimef 20241203-151415
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network RadioSch2
-attr processid 4012
+attr processid 18296
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -19,6 +19,7 @@ attr seedset 0
 config network RadioSch2
 config sim-time-limit 100h
 config cpu-time-limit 300s
+config simtime-resolution ns
 
 par RadioSch2.scheduler typename "\"Scheduler\""
 par RadioSch2.scheduler schedulingPeriod 1ms
@@ -36,13 +37,13 @@ par RadioSch2.user[1].generator typename "\"Source\""
 par RadioSch2.user[1].generator sendIaTime 10ms
 attr unit ms
 par RadioSch2.user[1].myqq typename "\"MyQ\""
-par RadioSch2.user[1].myqq qlp 1
+par RadioSch2.user[1].myqq qlp 2
 par RadioSch2.user[1] typename "\"User\""
 par RadioSch2.user[2].generator typename "\"Source\""
 par RadioSch2.user[2].generator sendIaTime 10ms
 attr unit ms
 par RadioSch2.user[2].myqq typename "\"MyQ\""
-par RadioSch2.user[2].myqq qlp 2
+par RadioSch2.user[2].myqq qlp 3
 par RadioSch2.user[2] typename "\"User\""
 par RadioSch2 typename "\"RadioSch2\""
 par RadioSch2 usersCount 3

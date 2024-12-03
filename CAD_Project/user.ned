@@ -19,8 +19,7 @@ module User
 {
     parameters:
     	//@display("i=block/user");
-
-   // @display("bgb=90,160");
+		// @display("bgb=90,160");
 
     gates:
         output txPackets;
@@ -29,7 +28,6 @@ module User
 
     submodules:
         generator: Source;
-
         myqq: MyQ;
 
     connections:
@@ -37,5 +35,4 @@ module User
         generator.txPackets --> myqq.rxPackets;
         myqq.txPackets --> txPackets;
         myqq.txInfo --> txInfo;
-
 }
