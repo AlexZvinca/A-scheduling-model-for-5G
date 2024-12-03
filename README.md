@@ -1,4 +1,4 @@
-# 
+# A-scheduling-model-for-LTE
 
 Based on files from Doru Todincă - Computer Aided Design - AC - UPT
 
