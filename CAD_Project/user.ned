@@ -18,8 +18,8 @@ import Source;
 module User
 {
     parameters:
-    	//@display("i=block/user");
-		// @display("bgb=90,160");
+    	@display("i=block/user");
+		@display("bgb=90,160");
 
     gates:
         output txPackets;

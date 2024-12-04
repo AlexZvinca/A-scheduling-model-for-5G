@@ -1,21 +1,24 @@
 version 3
-run General-0-20241203-15:14:15-18296
-attr configname General
-attr datetime 20241203-15:14:15
-attr datetimef 20241203-151415
-attr experiment General
+run Sched1-0-20241204-13:14:12-9280
+attr configname Sched1
+attr datetime 20241204-13:14:12
+attr datetimef 20241204-131412
+attr experiment Sched1
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network RadioSch2
-attr processid 18296
+attr processid 9280
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
+config description "low job arrival rate"
+config *.usersCount 3
+config **.user[*].generator.sendIaTime "0.2 ms"
 config network RadioSch2
 config sim-time-limit 100h
 config cpu-time-limit 300s
@@ -28,22 +31,22 @@ par RadioSch2.scheduler gateSize 3
 par RadioSch2.sink typename "\"Sink\""
 par RadioSch2.sink gateSize 3
 par RadioSch2.user[0].generator typename "\"Source\""
-par RadioSch2.user[0].generator sendIaTime 10ms
+par RadioSch2.user[0].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[0].myqq typename "\"MyQ\""
-par RadioSch2.user[0].myqq qlp 1
+par RadioSch2.user[0].myqq qlp 0
 par RadioSch2.user[0] typename "\"User\""
 par RadioSch2.user[1].generator typename "\"Source\""
-par RadioSch2.user[1].generator sendIaTime 10ms
+par RadioSch2.user[1].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[1].myqq typename "\"MyQ\""
-par RadioSch2.user[1].myqq qlp 2
+par RadioSch2.user[1].myqq qlp 0
 par RadioSch2.user[1] typename "\"User\""
 par RadioSch2.user[2].generator typename "\"Source\""
-par RadioSch2.user[2].generator sendIaTime 10ms
+par RadioSch2.user[2].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[2].myqq typename "\"MyQ\""
-par RadioSch2.user[2].myqq qlp 3
+par RadioSch2.user[2].myqq qlp 0
 par RadioSch2.user[2] typename "\"User\""
 par RadioSch2 typename "\"RadioSch2\""
 par RadioSch2 usersCount 3
