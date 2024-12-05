@@ -1,8 +1,8 @@
 version 3
-run Sched1-0-20241205-17:26:00-1732
+run Sched1-0-20241205-18:26:11-13600
 attr configname Sched1
-attr datetime 20241205-17:26:00
-attr datetimef 20241205-172600
+attr datetime 20241205-18:26:11
+attr datetimef 20241205-182611
 attr experiment Sched1
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network RadioSch2
-attr processid 1732
+attr processid 13600
 attr repetition 0
 attr replication #0
 attr resultdir results

@@ -14,6 +14,8 @@
 // 
 
 #include "Scheduler.h"
+#include <algorithm>
+#include <vector>
 
 Define_Module(Scheduler);
 
@@ -69,7 +71,7 @@ void Scheduler::handleMessage(cMessage *msg)
         double priorities[NrUsers];
         double totalPriority = 0.0;
 
-        for(int i=0; i<10;i++){
+        for(int i=0; i<NrUsers;i++){
             radioQuality[i] = uniform(1, 10);
         }
 
@@ -94,6 +96,7 @@ void Scheduler::handleMessage(cMessage *msg)
             }
         }*/
 
+        std::vector<std::pair<int, double>> userPriorities;
 
         for (int i = 0; i < NrUsers; i++) {
 
@@ -107,38 +110,54 @@ void Scheduler::handleMessage(cMessage *msg)
                    //priorities[i] = weights[i] * (simTime().dbl() - lastServedTime[i].dbl());
 
                    //PF
-                   priorities[i] = radioQuality[i] * weights[i] * (simTime().dbl() - lastServedTime[i].dbl());
+                   priorities[i] = radioQuality[i] *  weights[i] * (simTime().dbl() - lastServedTime[i].dbl());
 
                    //LQ
                    //priorities[i] = q[i] * weights[i];
 
                    totalPriority += priorities[i];
+                   userPriorities.push_back({i, priorities[i]});
                }
 
-        for (int i = 0; i < NrUsers; i++) {
-                if (remainingBlocks > 0 && q[i] > 0) {
-                    // Proportional allocation
-                    int allocatedBlocks = std::round((priorities[i] / totalPriority) * remainingBlocks);
-                    allocatedBlocks = std::min(allocatedBlocks, q[i]); // Do not allocate more than available in queue
+        std::sort(userPriorities.begin(), userPriorities.end(),
+                          [](const std::pair<int, double>& a, const std::pair<int, double>& b) {
+                              return a.second > b.second;  // Sort in descending order
+                          });
+
+
+
+        for (const auto& user : userPriorities) {
+                int userIndex = user.first;
+                double userPriority = user.second;
+
+                if (remainingBlocks > 0 && q[userIndex] > 0) {
+
+                    int allocatedBlocks = std::ceil((userPriority / totalPriority) * remainingBlocks);
+                    allocatedBlocks = std::min(allocatedBlocks, q[userIndex]); // Do not allocate more than available in queue
                     allocatedBlocks = std::min(allocatedBlocks, remainingBlocks); // Do not exceed remaining blocks
 
-                    NrBlocks[i] = allocatedBlocks;
+                    NrBlocks[userIndex] = allocatedBlocks;
                     remainingBlocks -= allocatedBlocks;
 
-                    // Update last served time if blocks were allocated
-                    if (NrBlocks[i] > 0) {
-                        lastServedTime[i] = simTime();
+
+                    if (NrBlocks[userIndex] > 0) {
+                        lastServedTime[userIndex] = simTime();
                     }
                 }
             }
 
-        //distribute remaining blocks
-        for (int i = 0; i < NrUsers && remainingBlocks > 0; i++) {
-               if (q[i] > NrBlocks[i]) { // Only assign remaining blocks to users with unfulfilled demand
-                   NrBlocks[i]++;
-                   remainingBlocks--;
-               }
-        }
+
+        // Allocate remaining blocks based on priority
+        for (const auto& user : userPriorities) {
+                    int userIndex = user.first;
+                    if (remainingBlocks > 0 && q[userIndex] > NrBlocks[userIndex]) {
+                        NrBlocks[userIndex]++;
+                        remainingBlocks--;
+
+                        lastServedTime[userIndex] = simTime();
+                    }
+                }
+
 
 
 
@@ -150,9 +169,10 @@ void Scheduler::handleMessage(cMessage *msg)
                 cmd->par("nrBlocks").setLongValue(NrBlocks[i]);
                 send(cmd,"txScheduling",i);
                 EV << "Allocated " << NrBlocks[i] << " blocks to user " << i
-                                   << " (Priority: " << priorities[i] << ")" << endl;
+                                   << " (Priority: " << priorities[i] << ")" << "Available in queue: " << q[i] << endl;
             }
         }
+        EV << "Remaining Blocks: " << remainingBlocks << endl;
 
         scheduleAt(simTime()+par("schedulingPeriod").doubleValue(), selfMsg);
     }
