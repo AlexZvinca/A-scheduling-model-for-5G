@@ -32,9 +32,11 @@ private:
     cMessage *selfMsg;
     int NrUsers;
     int NrOfChannels;
-   // int userWeights[3];
+    int weights[10];
     int q[10];// queues' lengths. NrUsers schould be <= 10 !!!
     int NrBlocks[10];
+    omnetpp::SimTime lastServedTime[10];
+    double radioQuality[10];
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);

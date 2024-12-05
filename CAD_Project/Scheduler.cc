@@ -33,11 +33,17 @@ Scheduler::~Scheduler()
 void Scheduler::initialize()
 {
     NrUsers = par("gateSize").intValue();
-    NrOfChannels = 5;//read from omnetpp.ini
+    NrOfChannels = 14;//read from omnetpp.ini
     selfMsg = new cMessage("selfMsg");
-    for(int i=0; i<10;i++){
+    for(int i=0; i<NrUsers;i++){
            q[i]=0;
            NrBlocks[i]=0;
+           weights[i] = i+1;
+           radioQuality[i] = uniform(1, 10);
+           lastServedTime[i] = simTime();
+
+           EV << "Initialize user: " << i <<" weight: " << weights[i]
+                   << " Radio Quality: " << radioQuality[i] << endl;
     }
     scheduleAt(simTime(), selfMsg);
 
@@ -46,18 +52,7 @@ void Scheduler::initialize()
 
 void Scheduler::handleMessage(cMessage *msg)
 {
-   // int q[NrUsers];
- //   int NrBlocks[Nrusers];
 
-    /*
-    for(int j=0;j<NrUsers; j++){
-        q[j]= getParentModule()->getSubmodule("user",j)->getSubmodule("myqq")->par("qlp");
-        EV << "q["<<j<<"]= " << q[j] <<endl;
-    }
-     */
-
-
-   // int userWeights[NrUsers];
     for(int i=0;i < NrUsers;i++){
         if (msg->arrivedOn("rxInfo", i)){
             q[i]= msg->par("ql_info");
@@ -71,8 +66,15 @@ void Scheduler::handleMessage(cMessage *msg)
         memset(NrBlocks, 0, sizeof(NrBlocks));
         int totalBlocks = NrOfChannels;
         int remainingBlocks = totalBlocks;
+        double priorities[NrUsers];
+        double totalPriority = 0.0;
 
-        while (remainingBlocks > 0) {
+        for(int i=0; i<10;i++){
+            radioQuality[i] = uniform(1, 10);
+        }
+
+        //round robin in numerical order
+        /*while (remainingBlocks > 0) {
             bool anyAllocationMade = false;
 
             for (int i = 0; i < NrUsers; i++) {
@@ -81,6 +83,8 @@ void Scheduler::handleMessage(cMessage *msg)
                     NrBlocks[i]++;
                     remainingBlocks--;
                     anyAllocationMade = true;
+
+                    lastServedTime[i] = simTime();
                 }
             }
 
@@ -88,7 +92,56 @@ void Scheduler::handleMessage(cMessage *msg)
             if (!anyAllocationMade) {
                 break;
             }
+        }*/
+
+
+        for (int i = 0; i < NrUsers; i++) {
+
+                   //OS
+                   //priorities[i] = radioQuality[i];
+
+                   //RR - time priority
+                   //priorities[i] = simTime().dbl() - lastServedTime[i].dbl();
+
+                   //WRR
+                   //priorities[i] = weights[i] * (simTime().dbl() - lastServedTime[i].dbl());
+
+                   //PF
+                   priorities[i] = radioQuality[i] * weights[i] * (simTime().dbl() - lastServedTime[i].dbl());
+
+                   //LQ
+                   //priorities[i] = q[i] * weights[i];
+
+                   totalPriority += priorities[i];
+               }
+
+        for (int i = 0; i < NrUsers; i++) {
+                if (remainingBlocks > 0 && q[i] > 0) {
+                    // Proportional allocation
+                    int allocatedBlocks = std::round((priorities[i] / totalPriority) * remainingBlocks);
+                    allocatedBlocks = std::min(allocatedBlocks, q[i]); // Do not allocate more than available in queue
+                    allocatedBlocks = std::min(allocatedBlocks, remainingBlocks); // Do not exceed remaining blocks
+
+                    NrBlocks[i] = allocatedBlocks;
+                    remainingBlocks -= allocatedBlocks;
+
+                    // Update last served time if blocks were allocated
+                    if (NrBlocks[i] > 0) {
+                        lastServedTime[i] = simTime();
+                    }
+                }
+            }
+
+        //distribute remaining blocks
+        for (int i = 0; i < NrUsers && remainingBlocks > 0; i++) {
+               if (q[i] > NrBlocks[i]) { // Only assign remaining blocks to users with unfulfilled demand
+                   NrBlocks[i]++;
+                   remainingBlocks--;
+               }
         }
+
+
+
 
         for(int i=0;i < NrUsers;i++){
             if(NrBlocks[i] > 0){
@@ -96,7 +149,8 @@ void Scheduler::handleMessage(cMessage *msg)
                 cmd->addPar("nrBlocks");
                 cmd->par("nrBlocks").setLongValue(NrBlocks[i]);
                 send(cmd,"txScheduling",i);
-                EV << "Allocated " << NrBlocks[i] << " blocks to user " << i << endl;
+                EV << "Allocated " << NrBlocks[i] << " blocks to user " << i
+                                   << " (Priority: " << priorities[i] << ")" << endl;
             }
         }
 

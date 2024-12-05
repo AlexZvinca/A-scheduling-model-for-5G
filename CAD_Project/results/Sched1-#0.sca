@@ -1,8 +1,8 @@
 version 3
-run Sched1-0-20241205-16:04:49-7676
+run Sched1-0-20241205-17:26:00-1732
 attr configname Sched1
-attr datetime 20241205-16:04:49
-attr datetimef 20241205-160449
+attr datetime 20241205-17:26:00
+attr datetimef 20241205-172600
 attr experiment Sched1
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,14 +10,13 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network RadioSch2
-attr processid 7676
+attr processid 1732
 attr repetition 0
 attr replication #0
 attr resultdir results
 attr runnumber 0
 attr seedset 0
 config description "low job arrival rate"
-config *.usersCount 3
 config **.user[*].generator.sendIaTime "0.2 ms"
 config network RadioSch2
 config sim-time-limit 100h
@@ -27,9 +26,9 @@ config simtime-resolution ns
 par RadioSch2.scheduler typename "\"Scheduler\""
 par RadioSch2.scheduler schedulingPeriod 1ms
 attr unit ms
-par RadioSch2.scheduler gateSize 3
+par RadioSch2.scheduler gateSize 7
 par RadioSch2.sink typename "\"Sink\""
-par RadioSch2.sink gateSize 3
+par RadioSch2.sink gateSize 7
 par RadioSch2.user[0].generator typename "\"Source\""
 par RadioSch2.user[0].generator sendIaTime 0.2ms
 attr unit ms
@@ -48,6 +47,30 @@ attr unit ms
 par RadioSch2.user[2].myqq typename "\"MyQ\""
 par RadioSch2.user[2].myqq qlp 0
 par RadioSch2.user[2] typename "\"User\""
+par RadioSch2.user[3].generator typename "\"Source\""
+par RadioSch2.user[3].generator sendIaTime 0.2ms
+attr unit ms
+par RadioSch2.user[3].myqq typename "\"MyQ\""
+par RadioSch2.user[3].myqq qlp 0
+par RadioSch2.user[3] typename "\"User\""
+par RadioSch2.user[4].generator typename "\"Source\""
+par RadioSch2.user[4].generator sendIaTime 0.2ms
+attr unit ms
+par RadioSch2.user[4].myqq typename "\"MyQ\""
+par RadioSch2.user[4].myqq qlp 0
+par RadioSch2.user[4] typename "\"User\""
+par RadioSch2.user[5].generator typename "\"Source\""
+par RadioSch2.user[5].generator sendIaTime 0.2ms
+attr unit ms
+par RadioSch2.user[5].myqq typename "\"MyQ\""
+par RadioSch2.user[5].myqq qlp 0
+par RadioSch2.user[5] typename "\"User\""
+par RadioSch2.user[6].generator typename "\"Source\""
+par RadioSch2.user[6].generator sendIaTime 0.2ms
+attr unit ms
+par RadioSch2.user[6].myqq typename "\"MyQ\""
+par RadioSch2.user[6].myqq qlp 0
+par RadioSch2.user[6] typename "\"User\""
 par RadioSch2 typename "\"RadioSch2\""
-par RadioSch2 usersCount 3
+par RadioSch2 usersCount 7
 
