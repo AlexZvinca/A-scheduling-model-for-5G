@@ -37,14 +37,26 @@ void Source::handleMessage(cMessage *msg)
 
 
 {
+
+    int nrUsers = par("usersCount");
+    int nrPackets = par("packetsPerUser");
+    int PacketLength = 1;
+    double schedulingCycle = 1.0;
+    double netwload = par("networkLoad");
+    int nrChannels = par("channels");
+
     ASSERT(msg == sendMessageEvent);
     cMessage *job = new cMessage("job");
     send(job, "txPackets");
 
-    double sendingTime;
-    sendingTime = par("sendIaTime").doubleValue();
 
-    // if(simTime() >= MAX_SiM) endSimulation();
+    //double sendingTime;
+    //sendingTime = par("sendIaTime").doubleValue();
+
+    if(simTime() >= par("MAX_Sim").doubleValue()){
+        endSimulation();
+    }
+
     //MAX_SiM se pune in ini si citeste de acolo si trebuie sa fie de cel putin 1000 de ori mai mare
     // decat sendingTime pt netwload 80% (ideal de 10 mii de ori mai mare)
 
@@ -53,12 +65,12 @@ void Source::handleMessage(cMessage *msg)
 
     // sendingTime = function(network load)
 
-    /*netwload = data_generated/ transfer_rate
+    /*netwload = data_generated / transfer_rate
      *
      * data_generated = nrUsers* nrPackets *PacketLength / sendingTime
      * PacketLength = 1
      *
-     * transfer_rate = nr_of_channels/schedulingCycle ;
+     * transfer_rate = nr_of_channels/schedulingCycle;
      * schedulingCycle = 1 ms
      *
      * netwload = (nrUsers*nrPackets*PacketLength*schedulingCycle)/(sendingTime*nr_of_channels)
@@ -67,6 +79,15 @@ void Source::handleMessage(cMessage *msg)
      *
      * */
 
+    // Parameters to calculate sending time
 
-    scheduleAt(simTime()+ exponential(sendingTime), sendMessageEvent);
+
+
+    // Calculate sending time based on the network load
+    double sendingTime = (nrUsers * nrPackets * PacketLength * schedulingCycle) / (netwload * nrChannels);
+
+    // Output the calculated sending time for debugging
+    EV << "Calculated Sending Time: " << sendingTime << " ms" << endl;
+
+    scheduleAt(simTime() + exponential(sendingTime), sendMessageEvent);
 }

@@ -132,6 +132,7 @@ void Scheduler::handleMessage(cMessage *msg)
 
                 if (remainingBlocks > 0 && q[userIndex] > 0) {
 
+                    //the best channel from the remaining emtpy channels
                     int allocatedBlocks = std::ceil((userPriority / totalPriority) * remainingBlocks);
                     allocatedBlocks = std::min(allocatedBlocks, q[userIndex]); // Do not allocate more than available in queue
                     allocatedBlocks = std::min(allocatedBlocks, remainingBlocks); // Do not exceed remaining blocks
@@ -172,6 +173,10 @@ void Scheduler::handleMessage(cMessage *msg)
                                    << " (Priority: " << priorities[i] << ")" << "Available in queue: " << q[i] << endl;
             }
         }
+
+        //double transfer_rate = NrOfChannels / par("schedulingPeriod").doubleValue();
+        //double data_generated = (NrUsers * (totalBlocks - remainingBlocks) * 3) / 10ms;
+
         EV << "Remaining Blocks: " << remainingBlocks << endl;
 
         scheduleAt(simTime()+par("schedulingPeriod").doubleValue(), selfMsg);
