@@ -33,11 +33,11 @@ Scheduler::~Scheduler()
 void Scheduler::initialize()
 {
     NrUsers = par("gateSize").intValue();
-    NrOfChannels = 10;//read from omnetpp.ini
+    NrOfChannels = 5;//read from omnetpp.ini
     selfMsg = new cMessage("selfMsg");
     for(int i=0; i<10;i++){
            q[i]=0;
-         //  NrBlocks[i]=0;
+           NrBlocks[i]=0;
     }
     scheduleAt(simTime(), selfMsg);
 
@@ -57,42 +57,49 @@ void Scheduler::handleMessage(cMessage *msg)
      */
 
 
-    int userWeights[NrUsers];
-    for(int i =0; i<NrUsers;i++){
-
-    if (msg->arrivedOn("rxInfo", i)){
-        q[i]= msg->par("ql_info");
-        EV << "Update: q["<<i<<"]= " << q[i] <<endl;
-        delete(msg);
-
-    }
+   // int userWeights[NrUsers];
+    for(int i=0;i < NrUsers;i++){
+        if (msg->arrivedOn("rxInfo", i)){
+            q[i]= msg->par("ql_info");
+            EV << "Update: q["<<i<<"]= " << q[i] <<endl;
+            delete(msg);
+        }
     }
 
-        if (msg == selfMsg){
+    if (msg == selfMsg){
 
-          //here comes the scheduling algorithm !!!
-            for(int i =0;i<NrUsers;i++){
-                NrBlocks[i]=1;//you have to change this !!!
-             }
+        memset(NrBlocks, 0, sizeof(NrBlocks));
+        int totalBlocks = NrOfChannels;
+        int remainingBlocks = totalBlocks;
 
-            for(int i =0;i<NrUsers;i++){
+        while (remainingBlocks > 0) {
+            bool anyAllocationMade = false;
 
-        //finds out the length of each queue !!
-                if(NrBlocks[i]>0){
-                    cMessage *cmd = new cMessage("cmd");
-
-                    // q[i]= q[i]-NrBlocks[i];
-                    // EV << "Decrease: q["<<i<<"]= " << q[i] <<endl;
-                    cmd->addPar("nrBlocks");
-                    cmd->par("nrBlocks").setLongValue(NrBlocks[i]);
-                    //set parameter value, e.g., nr of blocks to be sent from the queue by user i
-                    //
-                    send(cmd,"txScheduling",i);
+            for (int i = 0; i < NrUsers; i++) {
+                // Only allocate blocks to users with a non-zero queue length
+                if (q[i] > 0 && remainingBlocks > 0) {
+                    NrBlocks[i]++;
+                    remainingBlocks--;
+                    anyAllocationMade = true;
                 }
-          //  double xtime = simTime().dbl();
             }
+
+            // Exit the loop if no allocation was made (i.e., all users' queues are empty)
+            if (!anyAllocationMade) {
+                break;
+            }
+        }
+
+        for(int i=0;i < NrUsers;i++){
+            if(NrBlocks[i] > 0){
+                cMessage *cmd = new cMessage("cmd");
+                cmd->addPar("nrBlocks");
+                cmd->par("nrBlocks").setLongValue(NrBlocks[i]);
+                send(cmd,"txScheduling",i);
+                EV << "Allocated " << NrBlocks[i] << " blocks to user " << i << endl;
+            }
+        }
+
         scheduleAt(simTime()+par("schedulingPeriod").doubleValue(), selfMsg);
-
     }
-
 }

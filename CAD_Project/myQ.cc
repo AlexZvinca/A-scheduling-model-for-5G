@@ -32,36 +32,28 @@ void MyQ::handleMessage(cMessage *msg)
         queue.insert(msg);
     } else if (msg->arrivedOn("rxScheduling")){
         //read parameters from msg
-        //int nrOfRadioBlocks = (int)msg->par("nrOfBlocks");
+        int nrOfRadioBlocks = (int)msg->par("nrBlocks");
         delete msg;
+
         //empty the queue !
-        while(!queue.isEmpty()){ //for(int j = 0;j < nrOfRadioBlocks;j++ )
-          msg = (cMessage *)queue.pop();
-          send(msg, "txPackets");
+        for(int j = 0;j < nrOfRadioBlocks && !queue.isEmpty();j++){
+            cMessage *pkt = (cMessage *)queue.pop();
+            send(pkt, "txPackets");
         }
     }
+
+
     ql = queue.getLength();
-
-
     cMessage *qInfo = new cMessage("qInfo");
     qInfo->addPar("ql_info");
     qInfo->par("ql_info").setLongValue(ql);//ql instead of 2
 
+
+
     //only for test
-
     int i =  getParentModule()->getIndex();
-
     long ql_info_tst = qInfo->par("ql_info");
     EV << "ql[" << i<<"] = " << ql << " ql_info_tst = " << ql_info_tst << endl;
+
     send(qInfo, "txInfo");
-
-    /* Communication between modules using parameters
-    ql = queue.getLength();
-    cPar&  qlpar = par("qlp");
-    qlpar.setIntValue(ql);
-    //next 2 statements only for debug
-    int qt = par("qlp").intValue();
-    EV << "qt= "<<qt <<endl;
-    */
-
 }

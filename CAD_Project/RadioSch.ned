@@ -33,7 +33,7 @@ network RadioSch2
         }
 
         user[usersCount]: User {
-            @display("p=40,120+40*i");
+            @display("p=120,100+60*i");
         }
 
     connections:
