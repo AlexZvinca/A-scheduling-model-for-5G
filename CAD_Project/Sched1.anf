@@ -5,7 +5,7 @@
         <input pattern="results/Sched1-*.sca"/>
     </inputs>
     <charts>
-        <chart createdWith="OMNeT++ 6.1.0.241008-f7568267cd" icon="icons/full/obj/histogramchart.png" id="910346678" name="Histogram Chart 1" resultTypes="histogram" template="histogramchart_native" type="HISTOGRAM">
+        <chart createdWith="OMNeT++ 6.1.0.241008-f7568267cd" icon="icons/full/obj/histogramchart.png" id="233351554" name="Histogram Chart 1" resultTypes="histogram" template="histogramchart_native" type="HISTOGRAM">
             <script><![CDATA[from omnetpp.scave import results, chart, utils
 
 # get chart properties

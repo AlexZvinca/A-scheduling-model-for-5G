@@ -19,31 +19,34 @@ Define_Module(Sink);
 
 void Sink::initialize()
 {
-    lifetimeSignal = registerSignal("lifetime");
+
+    int NrUsers = par("gateSize").intValue();
+    for (int i = 0; i < NrUsers; i++) {
+            std::string signalName = "lifetime_user" + std::to_string(i);
+            lifetimeSignals.push_back(registerSignal(signalName.c_str()));
+            EV << "Registered signal: " << signalName << endl;
+        }
+
+    //lifetimeSignal = registerSignal("lifetime");
 }
 
 void Sink::handleMessage(cMessage *msg)
 {
+
+    int NrUsers = par("gateSize").intValue();
     simtime_t lifetime = simTime() - msg->getCreationTime();
-    /*int NrUsers;
-
-    std::vector<cOutVector> lifetimeVectors;
-    NrUsers = par("gateSize").intValue();
-
-    lifetimeVectors.resize(NrUsers);
-    for (int i = 0; i < NrUsers; i++) {
-        std::string vectorName = "User " + std::to_string(i) + " Lifetime";
-        lifetimeVectors[i].setName(vectorName.c_str());
-    }
 
     for(int i=0;i < NrUsers;i++){
         if (msg->arrivedOn("rxPackets",i)) {
-            //lifetimeVectors[i].record(lifetime[i].dbl());
-            //EV << "Recording lifetime for user " << i << ": " << lifetime[i] << endl;
+            EV << "Message arrived on rxPackets[" << i << "]" << endl;
+
+            // Emit the lifetime signal for the corresponding user
+            emit(lifetimeSignals[i], lifetime);
+            break; // Exit the loop after identifying the gate
         }
-    }*/
+    }
 
       EV << "Received " << msg->getName() << ", lifetime: " << lifetime << "s" << endl;
-      emit(lifetimeSignal, lifetime);
+      //emit(lifetimeSignal, lifetime);
       delete msg;
 }

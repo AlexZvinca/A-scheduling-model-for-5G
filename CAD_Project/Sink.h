@@ -26,7 +26,8 @@ using namespace omnetpp;
 class Sink : public cSimpleModule
 {
 private:
-    simsignal_t lifetimeSignal;
+    //simsignal_t lifetimeSignal;
+    std::vector<simsignal_t> lifetimeSignals;
   protected:
     virtual void initialize();
     virtual void handleMessage(cMessage *msg);

@@ -1,4 +1,4 @@
-SB ov 1537 ev 2 rid Sched1-0-20241208-16:44:06-440
+SB ov 1537 ev 2 rid Sched1-0-20241208-22:03:04-10680
 
 E # 0 t 0 m 1 ce -1 msg -1
 MC id 1 c omnetpp::cModule t RadioSch2 n RadioSch2 cm 1
@@ -188,6 +188,13 @@ BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n selfMsg sm 2 st 0 am 2 at 0 pe 
 ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n selfMsg sm 2 st 0 am 2 at 0 pe 0
 CME
 CMB sm 1 tm 3 m initialize(0)
+- INFO: Registered signal: lifetime_user0
+- INFO: Registered signal: lifetime_user1
+- INFO: Registered signal: lifetime_user2
+- INFO: Registered signal: lifetime_user3
+- INFO: Registered signal: lifetime_user4
+- INFO: Registered signal: lifetime_user5
+- INFO: Registered signal: lifetime_user6
 CME
 CMB sm 1 tm 4 m initialize(0)
 CME
@@ -279,9 +286,9 @@ BS id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n job m 11 pe 2
 SH sm 11 sg 1
 ES id 11 tid 11 eid 11 etid 11 c omnetpp::cMessage n job sm 11 sg 1 st 0 am 12 ag 2 at 0 pe 2
 CL id 12 tid 11 eid 12 etid 11 c omnetpp::cMessage n job m 11 pe -1 cid 11
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n sendMessageEvent sm 11 st 0 am 11 at 4.941165382 pe 2
-ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n sendMessageEvent sm 11 st 0 am 11 at 4.941165382 pe 2
+- INFO: Calculated Sending Time: 4 ms
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n sendMessageEvent sm 11 st 0 am 11 at 8.894097688 pe 2
+ES id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n sendMessageEvent sm 11 st 0 am 11 at 8.894097688 pe 2
 
 E # 3 t 0 m 13 ce 0 msg 2
 CM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n job pe -1
@@ -304,9 +311,9 @@ BS id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n job m 13 pe 3
 SH sm 13 sg 1
 ES id 15 tid 15 eid 15 etid 15 c omnetpp::cMessage n job sm 13 sg 1 st 0 am 14 ag 2 at 0 pe 3
 CL id 16 tid 15 eid 16 etid 15 c omnetpp::cMessage n job m 13 pe -1 cid 15
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n sendMessageEvent sm 13 st 0 am 13 at 0.129743709 pe 3
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n sendMessageEvent sm 13 st 0 am 13 at 0.129743709 pe 3
+- INFO: Calculated Sending Time: 4 ms
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n sendMessageEvent sm 13 st 0 am 13 at 0.233538676 pe 3
+ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n sendMessageEvent sm 13 st 0 am 13 at 0.233538676 pe 3
 
 E # 4 t 0 m 15 ce 0 msg 3
 CM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n job pe -1
@@ -329,9 +336,9 @@ BS id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n job m 15 pe 4
 SH sm 15 sg 1
 ES id 19 tid 19 eid 19 etid 19 c omnetpp::cMessage n job sm 15 sg 1 st 0 am 16 ag 2 at 0 pe 4
 CL id 20 tid 19 eid 20 etid 19 c omnetpp::cMessage n job m 15 pe -1 cid 19
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n sendMessageEvent sm 15 st 0 am 15 at 7.366471733 pe 4
-ES id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n sendMessageEvent sm 15 st 0 am 15 at 7.366471733 pe 4
+- INFO: Calculated Sending Time: 4 ms
+BS id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n sendMessageEvent sm 15 st 0 am 15 at 13.25964912 pe 4
+ES id 3 tid 3 eid 3 etid 3 c omnetpp::cMessage n sendMessageEvent sm 15 st 0 am 15 at 13.25964912 pe 4
 
 E # 5 t 0 m 17 ce 0 msg 4
 CM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n job pe -1
@@ -354,9 +361,9 @@ BS id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n job m 17 pe 5
 SH sm 17 sg 1
 ES id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n job sm 17 sg 1 st 0 am 18 ag 2 at 0 pe 5
 CL id 24 tid 23 eid 24 etid 23 c omnetpp::cMessage n job m 17 pe -1 cid 23
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n sendMessageEvent sm 17 st 0 am 17 at 0.707458091 pe 5
-ES id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n sendMessageEvent sm 17 st 0 am 17 at 0.707458091 pe 5
+- INFO: Calculated Sending Time: 4 ms
+BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n sendMessageEvent sm 17 st 0 am 17 at 1.273424563 pe 5
+ES id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n sendMessageEvent sm 17 st 0 am 17 at 1.273424563 pe 5
 
 E # 6 t 0 m 19 ce 0 msg 5
 CM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n job pe -1
@@ -379,9 +386,9 @@ BS id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n job m 19 pe 6
 SH sm 19 sg 1
 ES id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n job sm 19 sg 1 st 0 am 20 ag 2 at 0 pe 6
 CL id 28 tid 27 eid 28 etid 27 c omnetpp::cMessage n job m 19 pe -1 cid 27
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n sendMessageEvent sm 19 st 0 am 19 at 1.074671344 pe 6
-ES id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n sendMessageEvent sm 19 st 0 am 19 at 1.074671344 pe 6
+- INFO: Calculated Sending Time: 4 ms
+BS id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n sendMessageEvent sm 19 st 0 am 19 at 1.93440842 pe 6
+ES id 5 tid 5 eid 5 etid 5 c omnetpp::cMessage n sendMessageEvent sm 19 st 0 am 19 at 1.93440842 pe 6
 
 E # 7 t 0 m 21 ce 0 msg 6
 CM id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n job pe -1
@@ -404,9 +411,9 @@ BS id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n job m 21 pe 7
 SH sm 21 sg 1
 ES id 31 tid 31 eid 31 etid 31 c omnetpp::cMessage n job sm 21 sg 1 st 0 am 22 ag 2 at 0 pe 7
 CL id 32 tid 31 eid 32 etid 31 c omnetpp::cMessage n job m 21 pe -1 cid 31
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n sendMessageEvent sm 21 st 0 am 21 at 1.443214107 pe 7
-ES id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n sendMessageEvent sm 21 st 0 am 21 at 1.443214107 pe 7
+- INFO: Calculated Sending Time: 4 ms
+BS id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n sendMessageEvent sm 21 st 0 am 21 at 2.597785393 pe 7
+ES id 6 tid 6 eid 6 etid 6 c omnetpp::cMessage n sendMessageEvent sm 21 st 0 am 21 at 2.597785393 pe 7
 
 E # 8 t 0 m 23 ce 0 msg 7
 CM id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n job pe -1
@@ -429,9 +436,9 @@ BS id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n job m 23 pe 8
 SH sm 23 sg 1
 ES id 35 tid 35 eid 35 etid 35 c omnetpp::cMessage n job sm 23 sg 1 st 0 am 24 ag 2 at 0 pe 8
 CL id 36 tid 35 eid 36 etid 35 c omnetpp::cMessage n job m 23 pe -1 cid 35
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n sendMessageEvent sm 23 st 0 am 23 at 3.486435817 pe 8
-ES id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n sendMessageEvent sm 23 st 0 am 23 at 3.486435817 pe 8
+- INFO: Calculated Sending Time: 4 ms
+BS id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n sendMessageEvent sm 23 st 0 am 23 at 6.27558447 pe 8
+ES id 7 tid 7 eid 7 etid 7 c omnetpp::cMessage n sendMessageEvent sm 23 st 0 am 23 at 6.27558447 pe 8
 
 E # 9 t 0 m 12 ce 2 msg 8
 CM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n qInfo pe -1
@@ -568,629 +575,4 @@ SH sm 7 sg 3
 ES id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n qInfo sm 18 sg 7 st 0 am 2 ag 2097155 at 0 pe 23
 CL id 51 tid 50 eid 51 etid 50 c omnetpp::cMessage n qInfo m 18 pe -1 cid 50
 
-E # 24 t 0 m 18 ce 5 msg 23
-CM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[3] = 4 ql_info_tst = 4
-BS id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n qInfo m 18 pe 24
-SH sm 18 sg 7
-SH sm 7 sg 3
-ES id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n qInfo sm 18 sg 7 st 0 am 2 ag 2097155 at 0 pe 24
-CL id 52 tid 51 eid 52 etid 51 c omnetpp::cMessage n qInfo m 18 pe -1 cid 51
-
-E # 25 t 0 m 20 ce 6 msg 24
-CM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[4] = 1 ql_info_tst = 1
-BS id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n qInfo m 20 pe 25
-SH sm 20 sg 7
-SH sm 8 sg 3
-ES id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n qInfo sm 20 sg 7 st 0 am 2 ag 2097156 at 0 pe 25
-CL id 53 tid 52 eid 53 etid 52 c omnetpp::cMessage n qInfo m 20 pe -1 cid 52
-
-E # 26 t 0 m 20 ce 6 msg 25
-CM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[4] = 2 ql_info_tst = 2
-BS id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n qInfo m 20 pe 26
-SH sm 20 sg 7
-SH sm 8 sg 3
-ES id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n qInfo sm 20 sg 7 st 0 am 2 ag 2097156 at 0 pe 26
-CL id 54 tid 53 eid 54 etid 53 c omnetpp::cMessage n qInfo m 20 pe -1 cid 53
-
-E # 27 t 0 m 20 ce 6 msg 26
-CM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[4] = 3 ql_info_tst = 3
-BS id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n qInfo m 20 pe 27
-SH sm 20 sg 7
-SH sm 8 sg 3
-ES id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n qInfo sm 20 sg 7 st 0 am 2 ag 2097156 at 0 pe 27
-CL id 55 tid 54 eid 55 etid 54 c omnetpp::cMessage n qInfo m 20 pe -1 cid 54
-
-E # 28 t 0 m 20 ce 6 msg 27
-CM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[4] = 4 ql_info_tst = 4
-BS id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n qInfo m 20 pe 28
-SH sm 20 sg 7
-SH sm 8 sg 3
-ES id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n qInfo sm 20 sg 7 st 0 am 2 ag 2097156 at 0 pe 28
-CL id 56 tid 55 eid 56 etid 55 c omnetpp::cMessage n qInfo m 20 pe -1 cid 55
-
-E # 29 t 0 m 22 ce 7 msg 28
-CM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[5] = 1 ql_info_tst = 1
-BS id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n qInfo m 22 pe 29
-SH sm 22 sg 7
-SH sm 9 sg 3
-ES id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n qInfo sm 22 sg 7 st 0 am 2 ag 2097157 at 0 pe 29
-CL id 57 tid 56 eid 57 etid 56 c omnetpp::cMessage n qInfo m 22 pe -1 cid 56
-
-E # 30 t 0 m 22 ce 7 msg 29
-CM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[5] = 2 ql_info_tst = 2
-BS id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n qInfo m 22 pe 30
-SH sm 22 sg 7
-SH sm 9 sg 3
-ES id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n qInfo sm 22 sg 7 st 0 am 2 ag 2097157 at 0 pe 30
-CL id 58 tid 57 eid 58 etid 57 c omnetpp::cMessage n qInfo m 22 pe -1 cid 57
-
-E # 31 t 0 m 22 ce 7 msg 30
-CM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[5] = 3 ql_info_tst = 3
-BS id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n qInfo m 22 pe 31
-SH sm 22 sg 7
-SH sm 9 sg 3
-ES id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n qInfo sm 22 sg 7 st 0 am 2 ag 2097157 at 0 pe 31
-CL id 59 tid 58 eid 59 etid 58 c omnetpp::cMessage n qInfo m 22 pe -1 cid 58
-
-E # 32 t 0 m 22 ce 7 msg 31
-CM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[5] = 4 ql_info_tst = 4
-BS id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n qInfo m 22 pe 32
-SH sm 22 sg 7
-SH sm 9 sg 3
-ES id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n qInfo sm 22 sg 7 st 0 am 2 ag 2097157 at 0 pe 32
-CL id 60 tid 59 eid 60 etid 59 c omnetpp::cMessage n qInfo m 22 pe -1 cid 59
-
-E # 33 t 0 m 24 ce 8 msg 32
-CM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[6] = 1 ql_info_tst = 1
-BS id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n qInfo m 24 pe 33
-SH sm 24 sg 7
-SH sm 10 sg 3
-ES id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n qInfo sm 24 sg 7 st 0 am 2 ag 2097158 at 0 pe 33
-CL id 61 tid 60 eid 61 etid 60 c omnetpp::cMessage n qInfo m 24 pe -1 cid 60
-
-E # 34 t 0 m 24 ce 8 msg 33
-CM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[6] = 2 ql_info_tst = 2
-BS id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n qInfo m 24 pe 34
-SH sm 24 sg 7
-SH sm 10 sg 3
-ES id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n qInfo sm 24 sg 7 st 0 am 2 ag 2097158 at 0 pe 34
-CL id 62 tid 61 eid 62 etid 61 c omnetpp::cMessage n qInfo m 24 pe -1 cid 61
-
-E # 35 t 0 m 24 ce 8 msg 34
-CM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[6] = 3 ql_info_tst = 3
-BS id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n qInfo m 24 pe 35
-SH sm 24 sg 7
-SH sm 10 sg 3
-ES id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n qInfo sm 24 sg 7 st 0 am 2 ag 2097158 at 0 pe 35
-CL id 63 tid 62 eid 63 etid 62 c omnetpp::cMessage n qInfo m 24 pe -1 cid 62
-
-E # 36 t 0 m 24 ce 8 msg 35
-CM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[6] = 4 ql_info_tst = 4
-BS id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n qInfo m 24 pe 36
-SH sm 24 sg 7
-SH sm 10 sg 3
-ES id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n qInfo sm 24 sg 7 st 0 am 2 ag 2097158 at 0 pe 36
-CL id 64 tid 63 eid 64 etid 63 c omnetpp::cMessage n qInfo m 24 pe -1 cid 63
-
-E # 37 t 0 m 2 ce 9 msg 36
-- INFO: Update: q[0]= 1
-DM id 36 tid 36 eid 36 etid 36 c omnetpp::cMessage n qInfo m 2 pe 37
-
-E # 38 t 0 m 2 ce 10 msg 37
-- INFO: Update: q[0]= 2
-DM id 37 tid 37 eid 37 etid 37 c omnetpp::cMessage n qInfo m 2 pe 38
-
-E # 39 t 0 m 2 ce 11 msg 38
-- INFO: Update: q[0]= 3
-DM id 38 tid 38 eid 38 etid 38 c omnetpp::cMessage n qInfo m 2 pe 39
-
-E # 40 t 0 m 2 ce 12 msg 39
-- INFO: Update: q[0]= 4
-DM id 39 tid 39 eid 39 etid 39 c omnetpp::cMessage n qInfo m 2 pe 40
-
-E # 41 t 0 m 2 ce 13 msg 40
-- INFO: Update: q[1]= 1
-DM id 40 tid 40 eid 40 etid 40 c omnetpp::cMessage n qInfo m 2 pe 41
-
-E # 42 t 0 m 2 ce 14 msg 41
-- INFO: Update: q[1]= 2
-DM id 41 tid 41 eid 41 etid 41 c omnetpp::cMessage n qInfo m 2 pe 42
-
-E # 43 t 0 m 2 ce 15 msg 42
-- INFO: Update: q[1]= 3
-DM id 42 tid 42 eid 42 etid 42 c omnetpp::cMessage n qInfo m 2 pe 43
-
-E # 44 t 0 m 2 ce 16 msg 43
-- INFO: Update: q[1]= 4
-DM id 43 tid 43 eid 43 etid 43 c omnetpp::cMessage n qInfo m 2 pe 44
-
-E # 45 t 0 m 2 ce 17 msg 44
-- INFO: Update: q[2]= 1
-DM id 44 tid 44 eid 44 etid 44 c omnetpp::cMessage n qInfo m 2 pe 45
-
-E # 46 t 0 m 2 ce 18 msg 45
-- INFO: Update: q[2]= 2
-DM id 45 tid 45 eid 45 etid 45 c omnetpp::cMessage n qInfo m 2 pe 46
-
-E # 47 t 0 m 2 ce 19 msg 46
-- INFO: Update: q[2]= 3
-DM id 46 tid 46 eid 46 etid 46 c omnetpp::cMessage n qInfo m 2 pe 47
-
-E # 48 t 0 m 2 ce 20 msg 47
-- INFO: Update: q[2]= 4
-DM id 47 tid 47 eid 47 etid 47 c omnetpp::cMessage n qInfo m 2 pe 48
-
-E # 49 t 0 m 2 ce 21 msg 48
-- INFO: Update: q[3]= 1
-DM id 48 tid 48 eid 48 etid 48 c omnetpp::cMessage n qInfo m 2 pe 49
-
-E # 50 t 0 m 2 ce 22 msg 49
-- INFO: Update: q[3]= 2
-DM id 49 tid 49 eid 49 etid 49 c omnetpp::cMessage n qInfo m 2 pe 50
-
-E # 51 t 0 m 2 ce 23 msg 50
-- INFO: Update: q[3]= 3
-DM id 50 tid 50 eid 50 etid 50 c omnetpp::cMessage n qInfo m 2 pe 51
-
-E # 52 t 0 m 2 ce 24 msg 51
-- INFO: Update: q[3]= 4
-DM id 51 tid 51 eid 51 etid 51 c omnetpp::cMessage n qInfo m 2 pe 52
-
-E # 53 t 0 m 2 ce 25 msg 52
-- INFO: Update: q[4]= 1
-DM id 52 tid 52 eid 52 etid 52 c omnetpp::cMessage n qInfo m 2 pe 53
-
-E # 54 t 0 m 2 ce 26 msg 53
-- INFO: Update: q[4]= 2
-DM id 53 tid 53 eid 53 etid 53 c omnetpp::cMessage n qInfo m 2 pe 54
-
-E # 55 t 0 m 2 ce 27 msg 54
-- INFO: Update: q[4]= 3
-DM id 54 tid 54 eid 54 etid 54 c omnetpp::cMessage n qInfo m 2 pe 55
-
-E # 56 t 0 m 2 ce 28 msg 55
-- INFO: Update: q[4]= 4
-DM id 55 tid 55 eid 55 etid 55 c omnetpp::cMessage n qInfo m 2 pe 56
-
-E # 57 t 0 m 2 ce 29 msg 56
-- INFO: Update: q[5]= 1
-DM id 56 tid 56 eid 56 etid 56 c omnetpp::cMessage n qInfo m 2 pe 57
-
-E # 58 t 0 m 2 ce 30 msg 57
-- INFO: Update: q[5]= 2
-DM id 57 tid 57 eid 57 etid 57 c omnetpp::cMessage n qInfo m 2 pe 58
-
-E # 59 t 0 m 2 ce 31 msg 58
-- INFO: Update: q[5]= 3
-DM id 58 tid 58 eid 58 etid 58 c omnetpp::cMessage n qInfo m 2 pe 59
-
-E # 60 t 0 m 2 ce 32 msg 59
-- INFO: Update: q[5]= 4
-DM id 59 tid 59 eid 59 etid 59 c omnetpp::cMessage n qInfo m 2 pe 60
-
-E # 61 t 0 m 2 ce 33 msg 60
-- INFO: Update: q[6]= 1
-DM id 60 tid 60 eid 60 etid 60 c omnetpp::cMessage n qInfo m 2 pe 61
-
-E # 62 t 0 m 2 ce 34 msg 61
-- INFO: Update: q[6]= 2
-DM id 61 tid 61 eid 61 etid 61 c omnetpp::cMessage n qInfo m 2 pe 62
-
-E # 63 t 0 m 2 ce 35 msg 62
-- INFO: Update: q[6]= 3
-DM id 62 tid 62 eid 62 etid 62 c omnetpp::cMessage n qInfo m 2 pe 63
-
-E # 64 t 0 m 2 ce 36 msg 63
-- INFO: Update: q[6]= 4
-DM id 63 tid 63 eid 63 etid 63 c omnetpp::cMessage n qInfo m 2 pe 64
-
-E # 65 t 0.129743709 m 13 ce 3 msg 2
-CM id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n job pe -1
-BS id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n job m 13 pe 65
-SH sm 13 sg 1
-ES id 64 tid 64 eid 64 etid 64 c omnetpp::cMessage n job sm 13 sg 1 st 0.129743709 am 14 ag 2 at 0.129743709 pe 65
-CL id 65 tid 64 eid 65 etid 64 c omnetpp::cMessage n job m 13 pe -1 cid 64
-CM id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n job pe -1
-BS id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n job m 13 pe 65
-SH sm 13 sg 1
-ES id 65 tid 65 eid 65 etid 65 c omnetpp::cMessage n job sm 13 sg 1 st 0.129743709 am 14 ag 2 at 0.129743709 pe 65
-CL id 66 tid 65 eid 66 etid 65 c omnetpp::cMessage n job m 13 pe -1 cid 65
-CM id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n job pe -1
-BS id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n job m 13 pe 65
-SH sm 13 sg 1
-ES id 66 tid 66 eid 66 etid 66 c omnetpp::cMessage n job sm 13 sg 1 st 0.129743709 am 14 ag 2 at 0.129743709 pe 65
-CL id 67 tid 66 eid 67 etid 66 c omnetpp::cMessage n job m 13 pe -1 cid 66
-CM id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n job pe -1
-BS id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n job m 13 pe 65
-SH sm 13 sg 1
-ES id 67 tid 67 eid 67 etid 67 c omnetpp::cMessage n job sm 13 sg 1 st 0.129743709 am 14 ag 2 at 0.129743709 pe 65
-CL id 68 tid 67 eid 68 etid 67 c omnetpp::cMessage n job m 13 pe -1 cid 67
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n sendMessageEvent sm 13 st 0.129743709 am 13 at 3.845768599 pe 65
-ES id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n sendMessageEvent sm 13 st 0.129743709 am 13 at 3.845768599 pe 65
-
-E # 66 t 0.129743709 m 14 ce 65 msg 64
-CM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[1] = 5 ql_info_tst = 5
-BS id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n qInfo m 14 pe 66
-SH sm 14 sg 7
-SH sm 5 sg 3
-ES id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n qInfo sm 14 sg 7 st 0.129743709 am 2 ag 2097153 at 0.129743709 pe 66
-CL id 69 tid 68 eid 69 etid 68 c omnetpp::cMessage n qInfo m 14 pe -1 cid 68
-
-E # 67 t 0.129743709 m 14 ce 65 msg 65
-CM id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[1] = 6 ql_info_tst = 6
-BS id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n qInfo m 14 pe 67
-SH sm 14 sg 7
-SH sm 5 sg 3
-ES id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n qInfo sm 14 sg 7 st 0.129743709 am 2 ag 2097153 at 0.129743709 pe 67
-CL id 70 tid 69 eid 70 etid 69 c omnetpp::cMessage n qInfo m 14 pe -1 cid 69
-
-E # 68 t 0.129743709 m 14 ce 65 msg 66
-CM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[1] = 7 ql_info_tst = 7
-BS id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n qInfo m 14 pe 68
-SH sm 14 sg 7
-SH sm 5 sg 3
-ES id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n qInfo sm 14 sg 7 st 0.129743709 am 2 ag 2097153 at 0.129743709 pe 68
-CL id 71 tid 70 eid 71 etid 70 c omnetpp::cMessage n qInfo m 14 pe -1 cid 70
-
-E # 69 t 0.129743709 m 14 ce 65 msg 67
-CM id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[1] = 8 ql_info_tst = 8
-BS id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n qInfo m 14 pe 69
-SH sm 14 sg 7
-SH sm 5 sg 3
-ES id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n qInfo sm 14 sg 7 st 0.129743709 am 2 ag 2097153 at 0.129743709 pe 69
-CL id 72 tid 71 eid 72 etid 71 c omnetpp::cMessage n qInfo m 14 pe -1 cid 71
-
-E # 70 t 0.129743709 m 2 ce 66 msg 68
-- INFO: Update: q[1]= 5
-DM id 68 tid 68 eid 68 etid 68 c omnetpp::cMessage n qInfo m 2 pe 70
-
-E # 71 t 0.129743709 m 2 ce 67 msg 69
-- INFO: Update: q[1]= 6
-DM id 69 tid 69 eid 69 etid 69 c omnetpp::cMessage n qInfo m 2 pe 71
-
-E # 72 t 0.129743709 m 2 ce 68 msg 70
-- INFO: Update: q[1]= 7
-DM id 70 tid 70 eid 70 etid 70 c omnetpp::cMessage n qInfo m 2 pe 72
-
-E # 73 t 0.129743709 m 2 ce 69 msg 71
-- INFO: Update: q[1]= 8
-DM id 71 tid 71 eid 71 etid 71 c omnetpp::cMessage n qInfo m 2 pe 73
-
-E # 74 t 0.707458091 m 17 ce 5 msg 4
-CM id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n job pe -1
-BS id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n job m 17 pe 74
-SH sm 17 sg 1
-ES id 72 tid 72 eid 72 etid 72 c omnetpp::cMessage n job sm 17 sg 1 st 0.707458091 am 18 ag 2 at 0.707458091 pe 74
-CL id 73 tid 72 eid 73 etid 72 c omnetpp::cMessage n job m 17 pe -1 cid 72
-CM id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n job pe -1
-BS id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n job m 17 pe 74
-SH sm 17 sg 1
-ES id 73 tid 73 eid 73 etid 73 c omnetpp::cMessage n job sm 17 sg 1 st 0.707458091 am 18 ag 2 at 0.707458091 pe 74
-CL id 74 tid 73 eid 74 etid 73 c omnetpp::cMessage n job m 17 pe -1 cid 73
-CM id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n job pe -1
-BS id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n job m 17 pe 74
-SH sm 17 sg 1
-ES id 74 tid 74 eid 74 etid 74 c omnetpp::cMessage n job sm 17 sg 1 st 0.707458091 am 18 ag 2 at 0.707458091 pe 74
-CL id 75 tid 74 eid 75 etid 74 c omnetpp::cMessage n job m 17 pe -1 cid 74
-CM id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n job pe -1
-BS id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n job m 17 pe 74
-SH sm 17 sg 1
-ES id 75 tid 75 eid 75 etid 75 c omnetpp::cMessage n job sm 17 sg 1 st 0.707458091 am 18 ag 2 at 0.707458091 pe 74
-CL id 76 tid 75 eid 76 etid 75 c omnetpp::cMessage n job m 17 pe -1 cid 75
-- INFO: Calculated Sending Time: 2.22222 ms
-BS id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n sendMessageEvent sm 17 st 0.707458091 am 17 at 2.380067232 pe 74
-ES id 4 tid 4 eid 4 etid 4 c omnetpp::cMessage n sendMessageEvent sm 17 st 0.707458091 am 17 at 2.380067232 pe 74
-
-E # 75 t 0.707458091 m 18 ce 74 msg 72
-CM id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[3] = 5 ql_info_tst = 5
-BS id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n qInfo m 18 pe 75
-SH sm 18 sg 7
-SH sm 7 sg 3
-ES id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n qInfo sm 18 sg 7 st 0.707458091 am 2 ag 2097155 at 0.707458091 pe 75
-CL id 77 tid 76 eid 77 etid 76 c omnetpp::cMessage n qInfo m 18 pe -1 cid 76
-
-E # 76 t 0.707458091 m 18 ce 74 msg 73
-CM id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[3] = 6 ql_info_tst = 6
-BS id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n qInfo m 18 pe 76
-SH sm 18 sg 7
-SH sm 7 sg 3
-ES id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n qInfo sm 18 sg 7 st 0.707458091 am 2 ag 2097155 at 0.707458091 pe 76
-CL id 78 tid 77 eid 78 etid 77 c omnetpp::cMessage n qInfo m 18 pe -1 cid 77
-
-E # 77 t 0.707458091 m 18 ce 74 msg 74
-CM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[3] = 7 ql_info_tst = 7
-BS id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n qInfo m 18 pe 77
-SH sm 18 sg 7
-SH sm 7 sg 3
-ES id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n qInfo sm 18 sg 7 st 0.707458091 am 2 ag 2097155 at 0.707458091 pe 77
-CL id 79 tid 78 eid 79 etid 78 c omnetpp::cMessage n qInfo m 18 pe -1 cid 78
-
-E # 78 t 0.707458091 m 18 ce 74 msg 75
-CM id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[3] = 8 ql_info_tst = 8
-BS id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n qInfo m 18 pe 78
-SH sm 18 sg 7
-SH sm 7 sg 3
-ES id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n qInfo sm 18 sg 7 st 0.707458091 am 2 ag 2097155 at 0.707458091 pe 78
-CL id 80 tid 79 eid 80 etid 79 c omnetpp::cMessage n qInfo m 18 pe -1 cid 79
-
-E # 79 t 0.707458091 m 2 ce 75 msg 76
-- INFO: Update: q[3]= 5
-DM id 76 tid 76 eid 76 etid 76 c omnetpp::cMessage n qInfo m 2 pe 79
-
-E # 80 t 0.707458091 m 2 ce 76 msg 77
-- INFO: Update: q[3]= 6
-DM id 77 tid 77 eid 77 etid 77 c omnetpp::cMessage n qInfo m 2 pe 80
-
-E # 81 t 0.707458091 m 2 ce 77 msg 78
-- INFO: Update: q[3]= 7
-DM id 78 tid 78 eid 78 etid 78 c omnetpp::cMessage n qInfo m 2 pe 81
-
-E # 82 t 0.707458091 m 2 ce 78 msg 79
-- INFO: Update: q[3]= 8
-DM id 79 tid 79 eid 79 etid 79 c omnetpp::cMessage n qInfo m 2 pe 82
-
-E # 83 t 1 m 2 ce 1 msg 0
-CM id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n cmd pe -1
-BS id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n cmd m 2 pe 83
-SH sm 2 sg 1572864
-SH sm 4 sg 4
-ES id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n cmd sm 2 sg 1572864 st 1 am 12 ag 0 at 1 pe 83
-CL id 81 tid 80 eid 81 etid 80 c omnetpp::cMessage n cmd m 2 pe -1 cid 80
-- INFO: Allocated 1 blocks to user 0 (Priority: 5.31979)Available in queue: 4
-CM id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n cmd pe -1
-BS id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n cmd m 2 pe 83
-SH sm 2 sg 1572865
-SH sm 5 sg 4
-ES id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n cmd sm 2 sg 1572865 st 1 am 14 ag 0 at 1 pe 83
-CL id 82 tid 81 eid 82 etid 81 c omnetpp::cMessage n cmd m 2 pe -1 cid 81
-- INFO: Allocated 1 blocks to user 1 (Priority: 12.2248)Available in queue: 8
-CM id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n cmd pe -1
-BS id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n cmd m 2 pe 83
-SH sm 2 sg 1572866
-SH sm 6 sg 4
-ES id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n cmd sm 2 sg 1572866 st 1 am 16 ag 0 at 1 pe 83
-CL id 83 tid 82 eid 83 etid 82 c omnetpp::cMessage n cmd m 2 pe -1 cid 82
-- INFO: Allocated 1 blocks to user 2 (Priority: 13.6052)Available in queue: 4
-CM id 83 tid 83 eid 83 etid 83 c omnetpp::cMessage n cmd pe -1
-BS id 83 tid 83 eid 83 etid 83 c omnetpp::cMessage n cmd m 2 pe 83
-SH sm 2 sg 1572867
-SH sm 7 sg 4
-ES id 83 tid 83 eid 83 etid 83 c omnetpp::cMessage n cmd sm 2 sg 1572867 st 1 am 18 ag 0 at 1 pe 83
-CL id 84 tid 83 eid 84 etid 83 c omnetpp::cMessage n cmd m 2 pe -1 cid 83
-- INFO: Allocated 4 blocks to user 3 (Priority: 37.3215)Available in queue: 8
-CM id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n cmd pe -1
-BS id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n cmd m 2 pe 83
-SH sm 2 sg 1572868
-SH sm 8 sg 4
-ES id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n cmd sm 2 sg 1572868 st 1 am 20 ag 0 at 1 pe 83
-CL id 85 tid 84 eid 85 etid 84 c omnetpp::cMessage n cmd m 2 pe -1 cid 84
-- INFO: Allocated 4 blocks to user 4 (Priority: 42.6235)Available in queue: 4
-CM id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n cmd pe -1
-BS id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n cmd m 2 pe 83
-SH sm 2 sg 1572869
-SH sm 9 sg 4
-ES id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n cmd sm 2 sg 1572869 st 1 am 22 ag 0 at 1 pe 83
-CL id 86 tid 85 eid 86 etid 85 c omnetpp::cMessage n cmd m 2 pe -1 cid 85
-- INFO: Allocated 1 blocks to user 5 (Priority: 9.83595)Available in queue: 4
-CM id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n cmd pe -1
-BS id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n cmd m 2 pe 83
-SH sm 2 sg 1572870
-SH sm 10 sg 4
-ES id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n cmd sm 2 sg 1572870 st 1 am 24 ag 0 at 1 pe 83
-CL id 87 tid 86 eid 87 etid 86 c omnetpp::cMessage n cmd m 2 pe -1 cid 86
-- INFO: Allocated 2 blocks to user 6 (Priority: 28.256)Available in queue: 4
-- INFO: Remaining Blocks: 0
-BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n selfMsg sm 2 st 1 am 2 at 2 pe 83
-ES id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n selfMsg sm 2 st 1 am 2 at 2 pe 83
-
-E # 84 t 1 m 12 ce 83 msg 80
-DM id 80 tid 80 eid 80 etid 80 c omnetpp::cMessage n cmd m 12 pe 84
-BS id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n job m 12 pe 9
-SH sm 12 sg 5
-SH sm 4 sg 1
-ES id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n job sm 12 sg 5 st 1 am 3 ag 1048576 at 1 pe 84
-CL id 87 tid 8 eid 87 etid 8 c omnetpp::cMessage n job m 12 pe -1 cid 8
-CM id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[0] = 3 ql_info_tst = 3
-BS id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n qInfo m 12 pe 84
-SH sm 12 sg 7
-SH sm 4 sg 3
-ES id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n qInfo sm 12 sg 7 st 1 am 2 ag 2097152 at 1 pe 84
-CL id 88 tid 87 eid 88 etid 87 c omnetpp::cMessage n qInfo m 12 pe -1 cid 87
-
-E # 85 t 1 m 14 ce 83 msg 81
-DM id 81 tid 81 eid 81 etid 81 c omnetpp::cMessage n cmd m 14 pe 85
-BS id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n job m 14 pe 13
-SH sm 14 sg 5
-SH sm 5 sg 1
-ES id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n job sm 14 sg 5 st 1 am 3 ag 1048577 at 1 pe 85
-CL id 88 tid 12 eid 88 etid 12 c omnetpp::cMessage n job m 14 pe -1 cid 12
-CM id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[1] = 7 ql_info_tst = 7
-BS id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n qInfo m 14 pe 85
-SH sm 14 sg 7
-SH sm 5 sg 3
-ES id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n qInfo sm 14 sg 7 st 1 am 2 ag 2097153 at 1 pe 85
-CL id 89 tid 88 eid 89 etid 88 c omnetpp::cMessage n qInfo m 14 pe -1 cid 88
-
-E # 86 t 1 m 16 ce 83 msg 82
-DM id 82 tid 82 eid 82 etid 82 c omnetpp::cMessage n cmd m 16 pe 86
-BS id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n job m 16 pe 17
-SH sm 16 sg 5
-SH sm 6 sg 1
-ES id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n job sm 16 sg 5 st 1 am 3 ag 1048578 at 1 pe 86
-CL id 89 tid 16 eid 89 etid 16 c omnetpp::cMessage n job m 16 pe -1 cid 16
-CM id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[2] = 3 ql_info_tst = 3
-BS id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n qInfo m 16 pe 86
-SH sm 16 sg 7
-SH sm 6 sg 3
-ES id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n qInfo sm 16 sg 7 st 1 am 2 ag 2097154 at 1 pe 86
-CL id 90 tid 89 eid 90 etid 89 c omnetpp::cMessage n qInfo m 16 pe -1 cid 89
-
-E # 87 t 1 m 18 ce 83 msg 83
-DM id 83 tid 83 eid 83 etid 83 c omnetpp::cMessage n cmd m 18 pe 87
-BS id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n job m 18 pe 21
-SH sm 18 sg 5
-SH sm 7 sg 1
-ES id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n job sm 18 sg 5 st 1 am 3 ag 1048579 at 1 pe 87
-CL id 90 tid 20 eid 90 etid 20 c omnetpp::cMessage n job m 18 pe -1 cid 20
-BS id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n job m 18 pe 22
-SH sm 18 sg 5
-SH sm 7 sg 1
-ES id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n job sm 18 sg 5 st 1 am 3 ag 1048579 at 1 pe 87
-CL id 90 tid 21 eid 90 etid 21 c omnetpp::cMessage n job m 18 pe -1 cid 21
-BS id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n job m 18 pe 23
-SH sm 18 sg 5
-SH sm 7 sg 1
-ES id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n job sm 18 sg 5 st 1 am 3 ag 1048579 at 1 pe 87
-CL id 90 tid 22 eid 90 etid 22 c omnetpp::cMessage n job m 18 pe -1 cid 22
-BS id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n job m 18 pe 24
-SH sm 18 sg 5
-SH sm 7 sg 1
-ES id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n job sm 18 sg 5 st 1 am 3 ag 1048579 at 1 pe 87
-CL id 90 tid 23 eid 90 etid 23 c omnetpp::cMessage n job m 18 pe -1 cid 23
-CM id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[3] = 4 ql_info_tst = 4
-BS id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n qInfo m 18 pe 87
-SH sm 18 sg 7
-SH sm 7 sg 3
-ES id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n qInfo sm 18 sg 7 st 1 am 2 ag 2097155 at 1 pe 87
-CL id 91 tid 90 eid 91 etid 90 c omnetpp::cMessage n qInfo m 18 pe -1 cid 90
-
-E # 88 t 1 m 20 ce 83 msg 84
-DM id 84 tid 84 eid 84 etid 84 c omnetpp::cMessage n cmd m 20 pe 88
-BS id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n job m 20 pe 25
-SH sm 20 sg 5
-SH sm 8 sg 1
-ES id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n job sm 20 sg 5 st 1 am 3 ag 1048580 at 1 pe 88
-CL id 91 tid 24 eid 91 etid 24 c omnetpp::cMessage n job m 20 pe -1 cid 24
-BS id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n job m 20 pe 26
-SH sm 20 sg 5
-SH sm 8 sg 1
-ES id 25 tid 25 eid 25 etid 25 c omnetpp::cMessage n job sm 20 sg 5 st 1 am 3 ag 1048580 at 1 pe 88
-CL id 91 tid 25 eid 91 etid 25 c omnetpp::cMessage n job m 20 pe -1 cid 25
-BS id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n job m 20 pe 27
-SH sm 20 sg 5
-SH sm 8 sg 1
-ES id 26 tid 26 eid 26 etid 26 c omnetpp::cMessage n job sm 20 sg 5 st 1 am 3 ag 1048580 at 1 pe 88
-CL id 91 tid 26 eid 91 etid 26 c omnetpp::cMessage n job m 20 pe -1 cid 26
-BS id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n job m 20 pe 28
-SH sm 20 sg 5
-SH sm 8 sg 1
-ES id 27 tid 27 eid 27 etid 27 c omnetpp::cMessage n job sm 20 sg 5 st 1 am 3 ag 1048580 at 1 pe 88
-CL id 91 tid 27 eid 91 etid 27 c omnetpp::cMessage n job m 20 pe -1 cid 27
-CM id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[4] = 0 ql_info_tst = 0
-BS id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n qInfo m 20 pe 88
-SH sm 20 sg 7
-SH sm 8 sg 3
-ES id 91 tid 91 eid 91 etid 91 c omnetpp::cMessage n qInfo sm 20 sg 7 st 1 am 2 ag 2097156 at 1 pe 88
-CL id 92 tid 91 eid 92 etid 91 c omnetpp::cMessage n qInfo m 20 pe -1 cid 91
-
-E # 89 t 1 m 22 ce 83 msg 85
-DM id 85 tid 85 eid 85 etid 85 c omnetpp::cMessage n cmd m 22 pe 89
-BS id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n job m 22 pe 29
-SH sm 22 sg 5
-SH sm 9 sg 1
-ES id 28 tid 28 eid 28 etid 28 c omnetpp::cMessage n job sm 22 sg 5 st 1 am 3 ag 1048581 at 1 pe 89
-CL id 92 tid 28 eid 92 etid 28 c omnetpp::cMessage n job m 22 pe -1 cid 28
-CM id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[5] = 3 ql_info_tst = 3
-BS id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n qInfo m 22 pe 89
-SH sm 22 sg 7
-SH sm 9 sg 3
-ES id 92 tid 92 eid 92 etid 92 c omnetpp::cMessage n qInfo sm 22 sg 7 st 1 am 2 ag 2097157 at 1 pe 89
-CL id 93 tid 92 eid 93 etid 92 c omnetpp::cMessage n qInfo m 22 pe -1 cid 92
-
-E # 90 t 1 m 24 ce 83 msg 86
-DM id 86 tid 86 eid 86 etid 86 c omnetpp::cMessage n cmd m 24 pe 90
-BS id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n job m 24 pe 33
-SH sm 24 sg 5
-SH sm 10 sg 1
-ES id 32 tid 32 eid 32 etid 32 c omnetpp::cMessage n job sm 24 sg 5 st 1 am 3 ag 1048582 at 1 pe 90
-CL id 93 tid 32 eid 93 etid 32 c omnetpp::cMessage n job m 24 pe -1 cid 32
-BS id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n job m 24 pe 34
-SH sm 24 sg 5
-SH sm 10 sg 1
-ES id 33 tid 33 eid 33 etid 33 c omnetpp::cMessage n job sm 24 sg 5 st 1 am 3 ag 1048582 at 1 pe 90
-CL id 93 tid 33 eid 93 etid 33 c omnetpp::cMessage n job m 24 pe -1 cid 33
-CM id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n qInfo pe -1
-- INFO: ql[6] = 2 ql_info_tst = 2
-BS id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n qInfo m 24 pe 90
-SH sm 24 sg 7
-SH sm 10 sg 3
-ES id 93 tid 93 eid 93 etid 93 c omnetpp::cMessage n qInfo sm 24 sg 7 st 1 am 2 ag 2097158 at 1 pe 90
-CL id 94 tid 93 eid 94 etid 93 c omnetpp::cMessage n qInfo m 24 pe -1 cid 93
-
-E # 91 t 1 m 3 ce 84 msg 8
-- INFO: Received job, lifetime: 1s
-DM id 8 tid 8 eid 8 etid 8 c omnetpp::cMessage n job m 3 pe 91
-
-E # 92 t 1 m 2 ce 84 msg 87
-- INFO: Update: q[0]= 3
-DM id 87 tid 87 eid 87 etid 87 c omnetpp::cMessage n qInfo m 2 pe 92
-
-E # 93 t 1 m 3 ce 85 msg 12
-- INFO: Received job, lifetime: 1s
-DM id 12 tid 12 eid 12 etid 12 c omnetpp::cMessage n job m 3 pe 93
-
-E # 94 t 1 m 2 ce 85 msg 88
-- INFO: Update: q[1]= 7
-DM id 88 tid 88 eid 88 etid 88 c omnetpp::cMessage n qInfo m 2 pe 94
-
-E # 95 t 1 m 3 ce 86 msg 16
-- INFO: Received job, lifetime: 1s
-DM id 16 tid 16 eid 16 etid 16 c omnetpp::cMessage n job m 3 pe 95
-
-E # 96 t 1 m 2 ce 86 msg 89
-- INFO: Update: q[2]= 3
-DM id 89 tid 89 eid 89 etid 89 c omnetpp::cMessage n qInfo m 2 pe 96
-
-E # 97 t 1 m 3 ce 87 msg 20
-- INFO: Received job, lifetime: 1s
-DM id 20 tid 20 eid 20 etid 20 c omnetpp::cMessage n job m 3 pe 97
-
-E # 98 t 1 m 3 ce 87 msg 21
-- INFO: Received job, lifetime: 1s
-DM id 21 tid 21 eid 21 etid 21 c omnetpp::cMessage n job m 3 pe 98
-
-E # 99 t 1 m 3 ce 87 msg 22
-- INFO: Received job, lifetime: 1s
-DM id 22 tid 22 eid 22 etid 22 c omnetpp::cMessage n job m 3 pe 99
-
-E # 100 t 1 m 3 ce 87 msg 23
-- INFO: Received job, lifetime: 1s
-DM id 23 tid 23 eid 23 etid 23 c omnetpp::cMessage n job m 3 pe 100
-
-E # 101 t 1 m 2 ce 87 msg 90
-- INFO: Update: q[3]= 4
-DM id 90 tid 90 eid 90 etid 90 c omnetpp::cMessage n qInfo m 2 pe 101
-
-E # 102 t 1 m 3 ce 88 msg 24
-- INFO: Received job, lifetime: 1s
-DM id 24 tid 24 eid 24 etid 24 c omnetpp::cMessage n job m 3 pe 102
-
-SE e 0 c 10 m "The user has finished the simulation -- at t=1s, event #102"
+SE e 0 c 10 m "The user has finished the simulation -- at t=0s, event #23"

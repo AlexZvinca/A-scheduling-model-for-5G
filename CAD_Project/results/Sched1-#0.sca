@@ -1,8 +1,8 @@
 version 3
-run Sched1-0-20241208-16:44:06-440
+run Sched1-0-20241208-22:03:04-10680
 attr configname Sched1
-attr datetime 20241208-16:44:06
-attr datetimef 20241208-164406
+attr datetime 20241208-22:03:04
+attr datetimef 20241208-220304
 attr experiment Sched1
 attr inifile omnetpp.ini
 attr iterationvars ""
@@ -10,7 +10,7 @@ attr iterationvarsd ""
 attr iterationvarsf ""
 attr measurement ""
 attr network RadioSch2
-attr processid 440
+attr processid 10680
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -20,7 +20,7 @@ config description "low job arrival rate"
 config *.scalar-recording true
 config *.vector-recording true
 config **.user[*].generator.sendIaTime "0.2 ms"
-config *.user[*].generator.networkLoad 0.9
+config *.user[*].generator.networkLoad 0.5
 config *.user[*].generator.packetsPerUser 4
 config *.user[*].generator.channels 14
 config *.user[*].generator.usersCount 7
@@ -38,12 +38,82 @@ attr unit ms
 par RadioSch2.scheduler gateSize 7
 par RadioSch2.sink typename "\"Sink\""
 par RadioSch2.sink gateSize 7
+scalar RadioSch2.sink lifetime_user6:mean nan
+attr interpolationmode none
+attr recordingmode mean
+attr title "User 6 Packet Lifetime, mean"
+attr unit s
+scalar RadioSch2.sink lifetime_user6:max nan
+attr interpolationmode none
+attr recordingmode max
+attr title "User 6 Packet Lifetime, max"
+attr unit s
+scalar RadioSch2.sink lifetime_user5:mean nan
+attr interpolationmode none
+attr recordingmode mean
+attr title "User 5 Packet Lifetime, mean"
+attr unit s
+scalar RadioSch2.sink lifetime_user5:max nan
+attr interpolationmode none
+attr recordingmode max
+attr title "User 5 Packet Lifetime, max"
+attr unit s
+scalar RadioSch2.sink lifetime_user4:mean nan
+attr interpolationmode none
+attr recordingmode mean
+attr title "User 4 Packet Lifetime, mean"
+attr unit s
+scalar RadioSch2.sink lifetime_user4:max nan
+attr interpolationmode none
+attr recordingmode max
+attr title "User 4 Packet Lifetime, max"
+attr unit s
+scalar RadioSch2.sink lifetime_user3:mean nan
+attr interpolationmode none
+attr recordingmode mean
+attr title "User 3 Packet Lifetime, mean"
+attr unit s
+scalar RadioSch2.sink lifetime_user3:max nan
+attr interpolationmode none
+attr recordingmode max
+attr title "User 3 Packet Lifetime, max"
+attr unit s
+scalar RadioSch2.sink lifetime_user2:mean nan
+attr interpolationmode none
+attr recordingmode mean
+attr title "User 2 Packet Lifetime, mean"
+attr unit s
+scalar RadioSch2.sink lifetime_user2:max nan
+attr interpolationmode none
+attr recordingmode max
+attr title "User 2 Packet Lifetime, max"
+attr unit s
+scalar RadioSch2.sink lifetime_user1:mean nan
+attr interpolationmode none
+attr recordingmode mean
+attr title "User 1 Packet Lifetime, mean"
+attr unit s
+scalar RadioSch2.sink lifetime_user1:max nan
+attr interpolationmode none
+attr recordingmode max
+attr title "User 1 Packet Lifetime, max"
+attr unit s
+scalar RadioSch2.sink lifetime_user0:mean nan
+attr interpolationmode none
+attr recordingmode mean
+attr title "User 0 Packet Lifetime, mean"
+attr unit s
+scalar RadioSch2.sink lifetime_user0:max nan
+attr interpolationmode none
+attr recordingmode max
+attr title "User 0 Packet Lifetime, max"
+attr unit s
 par RadioSch2.user[0].generator typename "\"Source\""
 par RadioSch2.user[0].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[0].generator MAX_Sim 10000ms
 attr unit ms
-par RadioSch2.user[0].generator networkLoad 0.9
+par RadioSch2.user[0].generator networkLoad 0.5
 par RadioSch2.user[0].generator packetsPerUser 4
 par RadioSch2.user[0].generator usersCount 7
 par RadioSch2.user[0].generator channels 14
@@ -54,7 +124,7 @@ par RadioSch2.user[1].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[1].generator MAX_Sim 10000ms
 attr unit ms
-par RadioSch2.user[1].generator networkLoad 0.9
+par RadioSch2.user[1].generator networkLoad 0.5
 par RadioSch2.user[1].generator packetsPerUser 4
 par RadioSch2.user[1].generator usersCount 7
 par RadioSch2.user[1].generator channels 14
@@ -65,7 +135,7 @@ par RadioSch2.user[2].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[2].generator MAX_Sim 10000ms
 attr unit ms
-par RadioSch2.user[2].generator networkLoad 0.9
+par RadioSch2.user[2].generator networkLoad 0.5
 par RadioSch2.user[2].generator packetsPerUser 4
 par RadioSch2.user[2].generator usersCount 7
 par RadioSch2.user[2].generator channels 14
@@ -76,7 +146,7 @@ par RadioSch2.user[3].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[3].generator MAX_Sim 10000ms
 attr unit ms
-par RadioSch2.user[3].generator networkLoad 0.9
+par RadioSch2.user[3].generator networkLoad 0.5
 par RadioSch2.user[3].generator packetsPerUser 4
 par RadioSch2.user[3].generator usersCount 7
 par RadioSch2.user[3].generator channels 14
@@ -87,7 +157,7 @@ par RadioSch2.user[4].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[4].generator MAX_Sim 10000ms
 attr unit ms
-par RadioSch2.user[4].generator networkLoad 0.9
+par RadioSch2.user[4].generator networkLoad 0.5
 par RadioSch2.user[4].generator packetsPerUser 4
 par RadioSch2.user[4].generator usersCount 7
 par RadioSch2.user[4].generator channels 14
@@ -98,7 +168,7 @@ par RadioSch2.user[5].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[5].generator MAX_Sim 10000ms
 attr unit ms
-par RadioSch2.user[5].generator networkLoad 0.9
+par RadioSch2.user[5].generator networkLoad 0.5
 par RadioSch2.user[5].generator packetsPerUser 4
 par RadioSch2.user[5].generator usersCount 7
 par RadioSch2.user[5].generator channels 14
@@ -109,7 +179,7 @@ par RadioSch2.user[6].generator sendIaTime 0.2ms
 attr unit ms
 par RadioSch2.user[6].generator MAX_Sim 10000ms
 attr unit ms
-par RadioSch2.user[6].generator networkLoad 0.9
+par RadioSch2.user[6].generator networkLoad 0.5
 par RadioSch2.user[6].generator packetsPerUser 4
 par RadioSch2.user[6].generator usersCount 7
 par RadioSch2.user[6].generator channels 14
