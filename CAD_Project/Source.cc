@@ -45,9 +45,11 @@ void Source::handleMessage(cMessage *msg)
     double netwload = par("networkLoad");
     int nrChannels = par("channels");
 
-    ASSERT(msg == sendMessageEvent);
-    cMessage *job = new cMessage("job");
-    send(job, "txPackets");
+    for(int i=0;i<nrPackets;i++){
+        ASSERT(msg == sendMessageEvent);
+        cMessage *job = new cMessage("job");
+        send(job, "txPackets");
+    }
 
 
     //double sendingTime;
@@ -83,7 +85,7 @@ void Source::handleMessage(cMessage *msg)
 
 
 
-    // Calculate sending time based on the network load
+    //Calculate sending time based on the network load
     double sendingTime = (nrUsers * nrPackets * PacketLength * schedulingCycle) / (netwload * nrChannels);
 
     // Output the calculated sending time for debugging

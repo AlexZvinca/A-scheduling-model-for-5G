@@ -19,7 +19,7 @@
 simple Source
 {
      parameters:
-        double sendIaTime @unit(s) = default(10 s);
+        double sendIaTime @unit(ms) = default(10 ms);
         double MAX_Sim @unit(ms) = default(10 ms);
         //volatile double generatorPeriod @unit(ms) = default(100ms);
         double networkLoad = default(0.5);
